@@ -103,10 +103,8 @@ export class HoennLeadersService {
     }
   ]);
 
-  // Public read-only view of the data that components can render.
   readonly hoennLeaders = this.hoennLeadersSignal.asReadonly();
 
-  // Derived value computed from the private signal.
   readonly leaderCount = computed(() => this.hoennLeadersSignal().length);
 
   getLeaderByName(name: string) {

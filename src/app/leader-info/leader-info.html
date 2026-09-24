@@ -1,13 +1,15 @@
 <div class="gym-card">
   <h3>{{ leader().name }}</h3>
   <p><strong>Badge:</strong> {{ leader().badge }}</p>
-  <p><strong>Age (Estimated):</strong> {{leader().age }} </p>
-  <p><strong>Location:</strong> {{ leader().location }}</p>
-  <p><strong>Type:</strong> {{ leader().type }}</p>
+  @if (leader().age) {
+    <p><strong>Age (Estimated):</strong> {{ leader().age }}</p>
+  }
+  <p><strong>Town:</strong> {{ leader().location }}</p>
+  <p><strong>Specialty:</strong> {{ leader().type }}</p>
 
   <h4>Pokémon Team:</h4>
   <ul>
-    @for (pokemon of leader().pokemonTeam; track pokemon.name) {
+    @for (pokemon of leader().pokemonTeam; track $index) {
       <li>{{ pokemon.name }} (Level {{ pokemon.level }})</li>
     }
   </ul>
