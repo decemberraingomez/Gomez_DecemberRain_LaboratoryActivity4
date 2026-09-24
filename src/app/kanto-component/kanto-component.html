@@ -1,0 +1,10 @@
+<div class="region-container kanto">
+  <h2>Kanto Region Gym Leaders</h2>
+
+  @for (leader of kantoLeaders; track leader.name) {
+    <app-leader-info
+      [leader]="leader"
+      (mottoToggled)="onMottoToggled($event)">
+    </app-leader-info>
+  }
+</div>

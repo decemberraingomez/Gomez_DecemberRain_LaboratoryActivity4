@@ -1,0 +1,23 @@
+.home-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #34495e;
+  padding: 10px 0 20px;
+}
+
+.home-container h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.region-history {
+  margin-top: 20px;
+  padding: 16px 20px;
+  background-color: #f8f9fa;
+  border-left: 4px solid #2c3e50;
+  border-radius: 4px;
+}
+
+.region-history h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}

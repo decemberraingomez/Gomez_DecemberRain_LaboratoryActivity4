@@ -1,0 +1,22 @@
+<div class="gym-card">
+  <h3>{{ leader().name }}</h3>
+  <p><strong>Badge:</strong> {{ leader().badge }}</p>
+  <p><strong>Age (Estimated):</strong> {{leader().age }} </p>
+  <p><strong>Location:</strong> {{ leader().location }}</p>
+  <p><strong>Type:</strong> {{ leader().type }}</p>
+
+  <h4>Pokémon Team:</h4>
+  <ul>
+    @for (pokemon of leader().pokemonTeam; track pokemon.name) {
+      <li>{{ pokemon.name }} (Level {{ pokemon.level }})</li>
+    }
+  </ul>
+
+  <button class="motto-btn" (click)="toggleMotto()">
+    {{ showMotto() ? 'Hide' : 'Show' }} Monologue
+  </button>
+
+  @if (showMotto()) {
+    <p class="motto">"{{ leader().motto }}"</p>
+  }
+</div>

@@ -1,0 +1,10 @@
+<div class="region-container johto">
+  <h2>Johto Region Gym Leaders</h2>
+
+  @for (leader of johtoLeaders; track leader.name) {
+    <app-leader-info
+      [leader]="leader"
+      (mottoToggled)="onMottoToggled($event)">
+    </app-leader-info>
+  }
+</div>
