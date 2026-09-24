@@ -1,1 +1,11 @@
-<p>hoenn-component works!</p>
+<div class="region-container hoenn">
+  <h2>Hoenn Region Gym Leaders</h2>
+  <p class="leader-count">{{ leaderCount() }} Gym Leaders</p>
+
+  @for (leader of hoennLeaders(); track leader.name) {
+    <app-leader-info
+      [leader]="leader"
+      (mottoToggled)="onMottoToggled($event)">
+    </app-leader-info>
+  }
+</div>
